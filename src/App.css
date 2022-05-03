@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* CUSTOM */
+h5{
+  font-weight: bold !important;
+}
+.centrar-texto {
+  text-align: center;
+}
+
+.container-list-cards {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-card {
+  width: 14rem;
+  margin: 3rem;
+  padding-bottom: .5rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-arrow::after {
+  content: ".";
+  color: #fff;
+  display: block;
+  position: absolute;
+  left: 0;  
+  background: url('//scotiabankfiles.azureedge.net/scotiabank-colombia/Global-Rebrand/arrow-right-red-link.svg') no-repeat left center;
+  background-size: 2.0em auto;
+  /* min-height: 100%; */
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+  margin-left: .5rem;
+  }
+
+.btn-arrow:hover{
+  transition: all 0.3s;
+  transform: scale(1.2);
+  padding-right: 3rem;
+}
+.img-cards:hover{
+  transition: all 0.3s;
+  padding: .25rem;
+}
+
+.contenedor{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+
+.hover12 :hover:after  {
+content: '\e212';
+position: absolute;
+/* z-index: 9; */
+top: 50%;
+left: 50%;
+-webkit-transform: translateY(-50%) translateX(-50%);
+-o-transform: translateY(-50%) translateX(-50%);
+transform: translateY(-50%) translateX(-50%);
+color: rgb(2, 2, 2);
+text-decoration: none !important;
+font-size: 100px;
+cursor: pointer;
+}
+.hover12 img:hover {
+opacity: .6;
+cursor: pointer;
+}
