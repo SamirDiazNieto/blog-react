@@ -19,7 +19,11 @@ function App() {
   const [blog, setblog] = React.useState({
     data: data,
     form: {
+<<<<<<< HEAD
       // id: "",
+=======
+      // id: "",˜
+>>>>>>> a380aa7b472b3c247d1d7239a9092bf3150d3a26
       titulo: "Titulo PR",
       categoria: "Categoría PR",
       descripcion: "Descripción PR",

@@ -5,4 +5,37 @@
 .banner-articulo{
     display: initial;
     width: 100%;
+<<<<<<< HEAD
 }
+=======
+}
+
+
+/* Administrador */
+
+.contenedor-admin {
+    display: flex;
+    cursor: pointer;
+}
+
+.contenedor-admin:hover a {
+    /* background-color: #EC111A; */
+    /* padding: .25rem; */
+    color: #EC111A;
+    font-weight: bold;
+
+}
+
+span a {
+    color: #000;
+    /* align-items: flex-end; */
+    text-align: right;
+    text-decoration: none;
+}
+
+#editar{
+    display: none;
+}
+
+
+>>>>>>> a380aa7b472b3c247d1d7239a9092bf3150d3a26
