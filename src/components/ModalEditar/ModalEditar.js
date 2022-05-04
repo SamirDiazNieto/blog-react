@@ -18,10 +18,6 @@ const ModalEditar = ({ setModalActualizar, isOpen, blog }) => {
 
   return (
     <Container>
-<<<<<<< HEAD
-      <h2>Samir</h2>
-=======
->>>>>>> a380aa7b472b3c247d1d7239a9092bf3150d3a26
       <Modal isOpen={isOpen}>
         <ModalHeader>
           <div>
