@@ -1,0 +1,37 @@
+.cuerpo-articulo {
+    margin-top: 3rem;
+
+}
+.banner-articulo{
+    display: initial;
+    width: 100%;
+}
+
+
+/* Administrador */
+
+.contenedor-admin {
+    display: flex;
+    cursor: pointer;
+}
+
+.contenedor-admin:hover a {
+    /* background-color: #EC111A; */
+    /* padding: .25rem; */
+    color: #EC111A;
+    font-weight: bold;
+
+}
+
+span a {
+    color: #000;
+    /* align-items: flex-end; */
+    text-align: right;
+    text-decoration: none;
+}
+
+#editar{
+    display: none;
+}
+
+
