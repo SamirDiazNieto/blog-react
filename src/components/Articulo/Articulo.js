@@ -3,30 +3,27 @@ import React from "react";
 import "./Articulo.css";
 import { Container } from "reactstrap";
 
-const Articulo = () => {
+const Articulo = ({ setModalActualizar, isOpen, blog }) => {
   
-const editar=() =>{
+const editarMeta=() =>{
 
-  const edit = document.getElementById("editar");
+  const edit = document.getElementById("editar-meta");
+  edit.style.display = "block";
+}
+const editarDesc=() =>{
+
+  const edit = document.getElementById("editar-contenido");
   edit.style.display = "block";
 }
 
   return(
-  <div className="Articulo" data-testid="Articulo">
-    <div className="banner-articulo">
-      <img
-        className="img-responsive"
-        src="https://ximg.es/1350x560/EC111A/fff"
-        alt="dummy"
-      />
-    </div>
-    <Container>
+    <Container isOpen={isOpen}>
       <hgroup className="cuerpo-articulo">
         <h2 className="centrar-texto">Titulo del Blog</h2>
         <h3 className="centrar-texto">Categoría</h3>
       </hgroup>
       <hr />
-      <div className="contenedor-admin" onClick={editar}>
+      <div className="contenedor-admin" onClick={editarMeta}>
         <div>
           <h4><b>¿Qué es Lorem Ipsum?</b></h4>
           <p>Lorem Ipsum es simplemente el texto de relleno de
@@ -42,11 +39,11 @@ const editar=() =>{
             PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
         </div>
         <div className="contenedor-admin">
-          <span className="contenedor-admin" id="editar">  <a href="/">Editar</a></span>
+          <span className="contenedor-admin" id="editar-meta">  <a href="/">Editar</a></span>
         </div>
       </div>
       <hr />
-      <div className="contenedor-admin">
+      <div className="contenedor-admin" onClick={editarDesc}>
       <div>
       <h4><b>¿Por qué lo usamos?</b></h4>
         <p> Es un hecho establecido hace demasiado tiempo que un lector se distraerá
@@ -78,15 +75,10 @@ const editar=() =>{
           linea en la sección 1.10.32{" "}</p>
       </div>
       <div className="contenedor-admin">
-          <span className="contenedor-admin">  <a href="/">Editar</a></span>
+          <span className="contenedor-admin" id="editar-contenido">  <a href="/">Editar</a></span>
         </div>
       </div>
-
-     
-
-
     </Container>
-  </div>
 )
           };
 
