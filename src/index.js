@@ -15,7 +15,7 @@ root.render(
 			<Routes>
 				<Route exact path='/' element={<App/>} />
         <Route exact path="/articulo" element={<Articulo/>} />
-        <Route exact path="/editar" element={<ModalEditar/>} />
+        {/* <Route exact path="/editar" element={<ModalEditar/>} /> */}
 				<Route exact element={<App/>} />
 			</Routes>
 		</BrowserRouter>

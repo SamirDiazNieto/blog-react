@@ -19,7 +19,7 @@
     /* background-color: #EC111A; */
     /* padding: .25rem; */
     color: #EC111A;
-    font-weight: bold;
+    
 
 }
 
@@ -28,6 +28,7 @@ span a {
     /* align-items: flex-end; */
     text-align: right;
     text-decoration: none;
+    font-weight: bold;
 }
 
 #editar-meta{

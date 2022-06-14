@@ -1,6 +1,6 @@
-import React from "react";
-// import PropTypes from 'prop-types';
-import "./ModalEditar.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import './ModalEditarArticulo.css';
 import {
   Container,
   Button,
@@ -10,18 +10,20 @@ import {
   FormGroup,
   ModalFooter,
 } from "reactstrap";
-
-const ModalEditar = ({ setModalActualizar, isOpen, blog }) => {
-  const cerrarModalActualizar = () => {
-    setModalActualizar(false);
+const ModalEditarArticulo = ({ setModalActualizarArticulo, isOpen, blog, editarMeta}) => {
+  const cerrarModalActualizarArticulo = () => {
+    setModalActualizarArticulo(false);
+    const edit = document.getElementById("editar-meta");
+    edit.style.display = "none";
   };
 
-  return (
-    <Container>
-      <Modal isOpen={isOpen}>
-        <ModalHeader>
+
+return(
+<Container>
+  <Modal isOpen={isOpen}>
+  <ModalHeader>
           <div>
-            <h3>Actualizar Blog {"usuario"}</h3>
+            <h3>Actualizar Articulo</h3>
           </div>
         </ModalHeader>
         <ModalBody>
@@ -38,7 +40,6 @@ const ModalEditar = ({ setModalActualizar, isOpen, blog }) => {
               value={blog.form._id}
             />
           </FormGroup> */}
-
           <FormGroup>
             <label>Titulo:</label>
             <input
@@ -64,34 +65,15 @@ const ModalEditar = ({ setModalActualizar, isOpen, blog }) => {
 
           <FormGroup>
             <label>Descripción:</label>
-            <input
-              className="form-control"
-              name="descripcion"
-              type="text"
-              // onChange={handleChange}
-              value={blog.form.descripcion}
-            />
-          </FormGroup>
 
-          <FormGroup>
-            <label>Contenido:</label>
-            <input
-              className="form-control"
-              name="contenido"
-              type="text"
-              // onChange={handleChange}
-              value={blog.form.contenido}
-            />
-          </FormGroup>
-          <FormGroup>
-            <label>Imagen:</label>
-            <input
-              className="form-control"
-              name="imagen"
-              type="file"
-              // onChange={handleChange}
-              // value={blog.form.imagen}
-            />
+            <textarea 
+            // onChange={handleChange}
+             value={blog.form.descripcion}
+             className="form-control"
+            id="descripcion" 
+            name="descripcion" 
+            rows="5" 
+            cols="50"></textarea>
           </FormGroup>
         </ModalBody>
 
@@ -102,17 +84,16 @@ const ModalEditar = ({ setModalActualizar, isOpen, blog }) => {
           >
             Actualizar
           </Button>
-          <Button className="btn btn-danger" onClick={cerrarModalActualizar}>
+          <Button className="btn btn-danger" onClick={cerrarModalActualizarArticulo}>
             Cancelar
           </Button>
         </ModalFooter>
-      </Modal>
-    </Container>
-  );
-};
+  </Modal>
+</Container>
+)};
 
-// ModalEditar.propTypes = {};
+ModalEditarArticulo.propTypes = {};
 
-// ModalEditar.defaultProps = {};
+ModalEditarArticulo.defaultProps = {};
 
-export default ModalEditar;
+export default ModalEditarArticulo;
